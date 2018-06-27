@@ -14,7 +14,7 @@ uint8_t mix(uint32_t t){
     uint32_t i, j;
 
     for (i = 0; i < (1<<COUNT); i ++){
-        freq = 1;
+        freq = 0.5;
         scale = 0.1;
         j = i;
         while (j > 0){
