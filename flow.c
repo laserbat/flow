@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#define COUNT 10
+#define COUNT 7
 #define DIV 1000
 
 uint8_t saw(uint64_t t){
