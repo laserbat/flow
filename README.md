@@ -6,3 +6,7 @@ Flow is an infinite procedural composition based around mixing lots of saw waves
 Or, you can stream it from my server. Every person streaming it hears the same part of this composition.
 
     curl -L laserbat.pw/flow | aplay -r 44100
+
+If you don't have a linux machine nearby, you can just listen to a pre-recorded OGG fragment of this composition:
+
+https://laserbat.pw/stuff/flow.ogg
