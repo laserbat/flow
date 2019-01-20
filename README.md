@@ -19,3 +19,7 @@ An extended composition based on flow.
 
     gcc -Ofast flow2.c -o flow2 
     ./flow2 | aplay -c 2 -r 44100
+
+Or
+
+    curl -sL laserbat.pw/flow2 | aplay -c2 -r 44100
