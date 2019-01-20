@@ -12,3 +12,10 @@ If you don't have a linux machine nearby, you can just listen to a pre-recorded 
 https://laserbat.pw/stuff/flow.ogg
 
 With default constants, flow will keep playing for 13.2 million of years without repeating. This limitation is caused by finite size 64-bit integers.
+
+## Flow 2
+
+An extended composition based on flow.
+
+    gcc -Ofast flow2.c -o flow2 
+    ./flow2 | aplay -c 2 -r 44100
