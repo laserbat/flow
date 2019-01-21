@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdint.h>
-#include <stdlib.h>
 
 #define MIN_THIRD 1.189
 #define MAJ_THIRD 1.126
