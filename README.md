@@ -22,7 +22,7 @@ An extended composition based on flow/flow2 with slight nonlinear dependency bet
     gcc -Ofast flow3.c -o flow3 
     ./flow3 | aplay -c2 -r44100
 
-Feel free to play around with \#define's in source code to find a variation that sounds best for you!
+Feel free to play around with \#define's in source code to find a variation that sounds best to you!
 
 ## Troubleshooting
 
