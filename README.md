@@ -20,7 +20,9 @@ flow2.c is slightly different version of this composition, in which synths are p
 An extended composition based on flow/flow2 with slight nonlinear dependency between synths.
 
     gcc -Ofast flow3.c -o flow3 
-    ./flow2 | aplay -c2 -r44100
+    ./flow3 | aplay -c2 -r44100
+
+Feel free to play around with \#define's in source code to find a variation that sounds best for you!
 
 ## Troubleshooting
 

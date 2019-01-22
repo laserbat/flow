@@ -1,18 +1,22 @@
 #include <stdio.h>
 #include <stdint.h>
 
+// These constants can be edited freely.
+// High SYNTH_COUNT will cause high CPU load!
 #define GLOBAL_PITCH 0.02
-
-#define OCTAVE_DOWN  0.5
-#define MIN_THIRD    1.189
-#define MAJ_THIRD    1.126
-#define FIFTH        1.498
 
 #define SYNTH_COUNT    128
 #define DETUNE_START   0.01
 #define DETUNE_OVERALL 1000
 
 #define STEREO_NONLIN  2
+
+// Take a look at https://en.wikipedia.org/wiki/Equal_temperament#Comparison_to_just_intonation
+// before changing these constants, as they define harmonic relations between synths.
+#define OCTAVE_DOWN  0.5
+#define MIN_THIRD    1.189
+#define MAJ_THIRD    1.126
+#define FIFTH        1.498
 
 uint8_t saw(uint64_t t){
     return t & 255;
