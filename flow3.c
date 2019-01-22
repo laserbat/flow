@@ -5,7 +5,7 @@
 #define MAJ_THIRD 1.126
 #define FIFTH     1.498
 
-#define COUNT 6
+#define COUNT 7
 #define DIV 1000
 
 uint8_t saw(uint64_t t){
@@ -49,38 +49,25 @@ uint8_t mix(uint64_t t, double mul){
 
 uint8_t chord(uint64_t t, double mul){
     if ((t >> 20) & 1) return (
-            mix(t, mul * FIFTH) +
-            mix(t, mul * MAJ_THIRD) +
+            mix(t, mul * 0.5) +
             mix(t, mul) +
-            mix(t, mul * 0.5)
+            mix(t, mul * FIFTH) +
+            mix(t, mul * MAJ_THIRD)
         ) >> 2;
 
     return (
-            mix(t, mul * FIFTH) +
-            mix(t, mul * MIN_THIRD) +
+            mix(t, mul * 0.5) +
             mix(t, mul) +
-            mix(t, mul * 0.5)
+            mix(t, mul * FIFTH) +
+            mix(t, mul * MIN_THIRD)
         ) >> 2;
 }
 
 uint8_t octaves(uint64_t t, double mul){
     return (
-            chord(t, mul * 4) +
-            chord(t, mul * 2) +
-            chord(t, mul) + 
-            chord(t, mul * 0.5) 
-        ) >> 2;
-}
-
-uint8_t lowpass(uint64_t t, double mul){
-    static uint8_t buff[4] = {0}, i;
-    uint8_t out;
-
-    buff[i] = octaves(t, mul);
-    out = (buff[i] + buff[(i + 2) % 4]) / 2;
-    i = (i + 1) % 4;
-
-    return out;
+            chord(t, mul * 0.5) +
+            chord(t, mul)
+        ) >> 1;
 }
 
 int main(void){
@@ -88,6 +75,6 @@ int main(void){
 
     while(1){
         t += 1;
-        putchar(lowpass(t, 0.02));
+        putchar(octaves(t, 0.02));
     }
 }
