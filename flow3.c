@@ -14,7 +14,7 @@ uint8_t saw(uint64_t t){
 
 uint8_t mix(uint64_t t, double mul){
     double freq, scale;
-    uint64_t res = 0, out = 0, temp = 0;
+    double res = 0, out = 0, temp = 0;
     double sum = 0, coeff;
     uint64_t i, j;
 
@@ -48,7 +48,7 @@ uint8_t mix(uint64_t t, double mul){
         sum += coeff;
     }
     
-    return out / sum;
+    return (uint8_t)(out / sum + 0.5);
 }
 
 uint8_t chord(uint64_t t, double mul){
