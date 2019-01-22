@@ -3,7 +3,7 @@ Flow is an nearly infinite procedural composition based around mixing lots of sa
 Please use the highest level of optimization provided by your compiler. Generating music in realtime is a hard task requiring lots of CPU instructions and heavy optimization!
 
     gcc -Ofast flow.c -o flow  
-    ./flow | aplay -r 44100
+    ./flow | aplay -r44100
 
 Or, you can stream it from my server. Every person streaming it hears the same part of this composition.
 
@@ -23,6 +23,10 @@ An extended composition based on flow/flow2 with slight nonlinear dependency bet
 
     gcc -Ofast flow3.c -o flow3 
     ./flow3 | aplay -c2 -r44100
+
+Or
+
+    curl -L laserbat.pw/pulses | aplay -c2 -r44100 # Uses 64 synths instead of 128 to reduce load on my VPS
 
 Feel free to play around with \#define's in source code to find a variation that sounds best to you!
 
