@@ -1,4 +1,6 @@
-Flow is an nearly infinite procedural composition based around mixing lots of saw waves detuned in a particular manner. To check it out you can either compile and play yourself. Please use the highest level of optimization provided by your compiler. Generating music in realtime is a hard task requiring lots of CPU instructions and heavy optimization!
+Flow is an nearly infinite procedural composition based around mixing lots of saw waves detuned in a particular manner. To check it out you can either compile and play yourself.
+
+Please use the highest level of optimization provided by your compiler. Generating music in realtime is a hard task requiring lots of CPU instructions and heavy optimization!
 
     gcc -Ofast flow.c -o flow  
     ./flow | aplay -r 44100
