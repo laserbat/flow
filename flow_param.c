@@ -95,6 +95,7 @@ int help(void){
             "\t-g VAL\t\tglobal pitch multiplier (double)\n"
             "\t-d VAL\t\tstarting detune (double)\n"
             "\t-s VAL\t\tdetune step (double)\n"
+            "\t-S VAL\t\tnumber of samples to skip (long long int)\n"
             );
     return -1;
 }
@@ -136,6 +137,10 @@ int main(int argc, char *argv[]){
                 case 's':
                     i += 1;
                     detune_step = atof(argv[i]);
+                    break;
+                case 'S':
+                    i += 1;
+                    t += atoll(argv[i]);
                     break;
                 default:
                     return help();
