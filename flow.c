@@ -35,7 +35,7 @@ uint8_t mix(uint64_t t){
 
         res += saw(t * freq);
     }
-    
+
     return res / (1<<COUNT);
 }
 
